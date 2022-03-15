@@ -11,6 +11,7 @@ RUN pip install setuptools
 RUN git clone https://android.googlesource.com/platform/ndk -b ndk-release-r17
 RUN git clone https://android.googlesource.com/platform/prebuilts/ndk prebuilts/ndk -b ndk-release-r17
 RUN git clone https://android.googlesource.com/platform/development -b ndk-release-r17
+RUN git clone https://android.googlesource.com/platform/external/llvm -b ndk-release-r17
 
 WORKDIR ndk
 
