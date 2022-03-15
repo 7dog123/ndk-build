@@ -15,7 +15,7 @@ RUN git clone \
 
 WORKDIR ndk
 
-pip install -r requirements.txt
+RUN pip install -r requirements.txt
 
 RUN python checkbuild.py --no-build-tests
 
