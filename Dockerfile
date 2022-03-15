@@ -15,7 +15,7 @@ RUN git clone https://android.googlesource.com/platform/external/llvm external/l
 
 WORKDIR ndk
 
-RUN pip install -r requirements.txt
+#RUN pip install -r requirements.txt
 
 RUN python checkbuild.py --no-build-tests
 
