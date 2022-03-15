@@ -10,13 +10,13 @@ RUN pip install setuptools
 
 RUN git clone https://android.googlesource.com/toolchain/gdb toolchain/gdb -b ndk-release-r17
 RUN git clone https://android.googlesource.com/platform/ndk -b ndk-release-r17
-RUN git clone https://android.googlesource.com/platform/prebuilts/ndk prebuilts/ndk -b ndk-release-r17
-RUN git clone https://android.googlesource.com/platform/development -b ndk-release-r17
-RUN git clone https://android.googlesource.com/platform/external/llvm external/llvm -b ndk-release-r17
+RUN git clone --depth=50 https://android.googlesource.com/platform/prebuilts/ndk prebuilts/ndk -b ndk-release-r17
+RUN git clone --depth=50 https://android.googlesource.com/platform/development -b ndk-release-r17
+RUN git clone --depth=50 https://android.googlesource.com/platform/external/llvm external/llvm -b ndk-release-r17
 
 WORKDIR ndk
 
-#RUN pip install -r requirements.txt
+RUN pip install -r requirements.txt
 
 RUN python checkbuild.py --no-build-tests
 
