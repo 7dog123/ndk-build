@@ -9,9 +9,9 @@ RUN apt-get update && \
 
 RUN pip install setuptools
 
-RUN git clone \
-    https://android.googlesource.com/platform/ndk -b ndk-release-r17 \
-    https://android.googlesource.com/platform/prebuilts/ndk prebuilts/ndk -b ndk-release-r17
+RUN git clone https://android.googlesource.com/platform/ndk -b ndk-release-r17
+
+RUN git clone https://android.googlesource.com/platform/prebuilts/ndk prebuilts/ndk -b ndk-release-r17
 
 WORKDIR ndk
 
