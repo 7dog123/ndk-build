@@ -18,6 +18,6 @@ WORKDIR ndk
 
 RUN pip install -r requirements.txt
 
-RUN python checkbuild.py --no-build-tests
+RUN python3 checkbuild.py --no-build-tests
 
 RUN ls
