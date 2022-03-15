@@ -6,8 +6,8 @@ RUN apt-get update && \
     apt-get -y install bison build-essential curl dos2unix flex \
     git make pbzip2 python2 python3-pip texinfo zip
 
-RUN ls -s /usr/bin/python /usr/bin/python2
-RUN ls -s /usr/bin/python-config /usr/bin/python2-config
+RUN ls -s /usr/bin/python2 /usr/bin/python
+RUN ls -s /usr/bin/python2-config /usr/bin/python-config
 
 RUN pip install setuptools
 
