@@ -23,8 +23,8 @@ WORKDIR ndk
 RUN pip install -r requirements.txt
 
 RUN cd  /ndk/sources/host-tools/make-3.81 && \
-    patch -p1 glob.c.patch
+    patch -p1 --verbose /ndk/glob.c.patch
 
-RUN cd /ndk python checkbuild.py --no-build-tests --no-package
+RUN cd /ndk && python checkbuild.py --no-build-tests --no-package
 
 RUN ls
