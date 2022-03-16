@@ -21,6 +21,8 @@ WORKDIR ndk
 
 RUN pip install -r requirements.txt
 
+RUN python host-tools/make-3.81/build.py
+
 RUN python checkbuild.py --no-build-tests --no-package
 
 RUN ls
