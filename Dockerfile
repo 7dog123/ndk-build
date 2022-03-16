@@ -21,6 +21,7 @@ RUN git clone https://android.googlesource.com/platform/external/shaderc/shaderc
 RUN git clone https://android.googlesource.com/platform/external/shaderc/spirv-tools external/shaderc/spirv-tools -b ndk-release-r17
 RUN git clone https://android.googlesource.com/platform/external/shaderc/spirv-headers external/shaderc/spirv-headers -b ndk-release-r17
 RUN git clone https://android.googlesource.com/platform/external/shaderc/glslang  external/shaderc/glslang -b ndk-release-r17
+RUN git clone https://android.googlesource.com/platform/external/googletest external/googletest -b ndk-release-r17
 RUN git clone --depth=50 https://android.googlesource.com/platform/prebuilts/ndk prebuilts/ndk -b ndk-release-r17
 RUN git clone --depth=50 https://android.googlesource.com/platform/development -b ndk-release-r17
 RUN git clone --depth=50 https://android.googlesource.com/platform/external/llvm external/llvm -b ndk-release-r17
