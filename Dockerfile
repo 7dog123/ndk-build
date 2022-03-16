@@ -17,6 +17,7 @@ RUN git clone https://android.googlesource.com/toolchain/python toolchain/python
 RUN git clone https://android.googlesource.com/toolchain/yasm toolchain/yasm -b ndk-release-r17
 RUN git clone https://android.googlesource.com/toolchain/build  toolchain/build -b ndk-release-r17
 RUN git clone https://android.googlesource.com/toolchain/gcc toolchain/gcc -b ndk-release-r17
+RUN git clone https://android.googlesource.com/platform/external/shaderc/shaderc external/shaderc/shaderc -b ndk-release-r17
 RUN git clone --depth=50 https://android.googlesource.com/platform/prebuilts/ndk prebuilts/ndk -b ndk-release-r17
 RUN git clone --depth=50 https://android.googlesource.com/platform/development -b ndk-release-r17
 RUN git clone --depth=50 https://android.googlesource.com/platform/external/llvm external/llvm -b ndk-release-r17
