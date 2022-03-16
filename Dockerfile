@@ -4,7 +4,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update && \
     apt-get -y install bison build-essential curl dos2unix flex \
-    git make pbzip2 python2 python3-pip texinfo zip
+    git make pbzip2 python2 python3-pip texinfo zip patch
 
 RUN ln -s /usr/bin/python2 /usr/bin/python
 RUN ln -s /usr/bin/python2-config /usr/bin/python-config
@@ -17,12 +17,14 @@ RUN git clone --depth=50 https://android.googlesource.com/platform/prebuilts/ndk
 RUN git clone --depth=50 https://android.googlesource.com/platform/development -b ndk-release-r17
 RUN git clone --depth=50 https://android.googlesource.com/platform/external/llvm external/llvm -b ndk-release-r17
 
+COPY ./glob.c.patch /ndk
 WORKDIR ndk
 
 RUN pip install -r requirements.txt
 
-RUN python  /ndk/sources/host-tools/make-3.81/build.py
+RUN cd  /ndk/sources/host-tools/make-3.81 && \
+    patch -p1 glob.c.patch
 
-RUN python checkbuild.py --no-build-tests --no-package
+RUN cd /ndk python checkbuild.py --no-build-tests --no-package
 
 RUN ls
