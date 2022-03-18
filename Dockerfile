@@ -1,11 +1,10 @@
-FROM ubuntu:latest
+FROM alpine:latest
 
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN df -h
 
-RUN apt-get update && \
-    apt-get -y install git
+RUN apk add git
 
 RUN git clone https://github.com/7dog123/ndk-build && \
     cd ndk-build && \
@@ -15,9 +14,8 @@ RUN git clone https://github.com/7dog123/ndk-build && \
 COPY ./glob.c.patch ndk-build/platform/ndk
 WORKDIR ndk-build/platform/ndk
 
-RUN apt-get update && \
-    apt-get -y install bison build-essential curl dos2unix flex \
-    make pbzip2 python2 python3-pip texinfo zip patch
+RUN apk add build-base bison curl dos2unix flex \
+    make pbzip2 python2 py3-pip texinfo zip patch
 
 RUN ln -s /usr/bin/python2 /usr/bin/python
 RUN ln -s /usr/bin/python2-config /usr/bin/python-config
