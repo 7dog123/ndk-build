@@ -114,3 +114,27 @@
 	path = platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.15-4.8
 	url = https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.15-4.8
 	branch = ndk-release-r17
+[submodule "platform/prebuilts/gcc/linux-x86/mips/mips64el-linux-android-4.9"]
+	path = platform/prebuilts/gcc/linux-x86/mips/mips64el-linux-android-4.9
+	url = https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/mips/mips64el-linux-android-4.9
+	branch = ndk-release-r17
+[submodule "platform/prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9"]
+	path = platform/prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9
+	url = https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9
+	branch = ndk-release-r17
+[submodule "platform/prebuilts/ninja/linux-x86"]
+	path = platform/prebuilts/ninja/linux-x86
+	url = https://android.googlesource.com/platform/prebuilts/ninja/linux-x86
+	branch = ndk-release-r17
+[submodule "platform/prebuilts/python/linux-x86/2.7.5"]
+	path = platform/prebuilts/python/linux-x86/2.7.5
+	url = https://android.googlesource.com/platform/prebuilts/python/linux-x86/2.7.5
+	branch = ndk-release-r17
+[submodule "platform/prebuilts/renderscript/host/linux-x86"]
+	path = platform/prebuilts/renderscript/host/linux-x86
+	url = https://android.googlesource.com/platform/prebuilts/renderscript/host/linux-x86
+	branch = ndk-release-r17
+[submodule "platform/prebuilts/simpleperf"]
+	path = platform/prebuilts/simpleperf
+	url = https://android.googlesource.com/platform/prebuilts/simpleperf
+	branch = ndk-release-r17
