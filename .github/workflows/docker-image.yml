@@ -14,14 +14,14 @@ jobs:
     
     steps:
     - name: Maximize build space
-        uses: easimon/maximize-build-space@master
-        with:
-          root-reserve-mb: 512
-          swap-size-mb: 2048
-          remove-dotnet: 'true'
-          temp-reserve-mb: 1024
-          remove-haskell: 'true'
-          remove-android: 'true'
+      uses: easimon/maximize-build-space@master
+      with:
+        root-reserve-mb: 512
+        swap-size-mb: 2048
+        remove-dotnet: 'true'
+        temp-reserve-mb: 1024
+        remove-haskell: 'true'
+        remove-android: 'true'
 
     - uses: actions/checkout@v2
 
