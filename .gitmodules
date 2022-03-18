@@ -1,0 +1,28 @@
+[submodule "toolchain/gdb"]
+	path = toolchain/gdb
+	url = https://android.googlesource.com/toolchain/gdb
+	branch = ndk-release-r17
+[submodule "toolchain/python"]
+	path = toolchain/python
+	url = https://android.googlesource.com/toolchain/python
+	branch = ndk-release-r17
+[submodule "toolchain/yasm"]
+	path = toolchain/yasm
+	url = https://android.googlesource.com/toolchain/yasm
+	branch = ndk-release-r17
+[submodule "toolchain/binutils"]
+	path = toolchain/binutils
+	url = https://android.googlesource.com/toolchain/binutils
+	branch = ndk-release-r17
+[submodule "toolchain/cloog"]
+	path = toolchain/cloog
+	url = https://android.googlesource.com/toolchain/cloog
+	branch = ndk-release-r17
+[submodule "toolchain/expat"]
+	path = toolchain/expat
+	url = https://android.googlesource.com/toolchain/expat
+	branch = ndk-release-r17
+[submodule "toolchain/gcc"]
+	path = toolchain/gcc
+	url = https://android.googlesource.com/toolchain/gcc
+	branch = ndk-release-r17
