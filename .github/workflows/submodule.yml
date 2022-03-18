@@ -21,9 +21,7 @@ jobs:
         fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
     - name: Create local changes
       run: |
-        git submodule add -b ndk-release-r17 https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86 platform/prebuilts/clang/host/linux-x86
-        git submodule add -b ndk-release-r17 https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8 platform/prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8
-        git submodule add -b ndk-release-r17 https://android.googlesource.com/platform/ndk platform/ndk
+        git submodule add -b ndk-release-r17 https://android.googlesource.com/platform/prebuilts/ndk platform/prebuilts/ndk
     - name: Commit files
       run: |
         git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
