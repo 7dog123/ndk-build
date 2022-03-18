@@ -41,7 +41,7 @@ jobs:
     - name: install python depebdencies
       run: |
        sudo pip install setuptools
-       sudo pip install -r platform/ndk/requirements.txt
+       cd platform/ndk/ && sudo pip install -r  requirements.txt
 
     - name: patch make
       run: |
@@ -49,7 +49,11 @@ jobs:
        cat ../../../../../glob.c.patch | patch -p1
 
     - name: build ndk
-      run: python platform/ndk/checkbuild.py --no-build-tests
+      run: cd platform/ndk/  && python checkbuild.py --no-build-tests
+
+    - name: look into the directory
+      run: ls
+
     #- name: Build the Docker image
      # run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
 
