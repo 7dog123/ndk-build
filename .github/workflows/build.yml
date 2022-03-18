@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: CI
 
 on:
   push:
@@ -28,5 +28,8 @@ jobs:
     - name: free up space
       run: ./free_disk_space.sh
 
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+    - name: git submodules
+      run: git submodule update --init
+
+    #- name: Build the Docker image
+     # run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
