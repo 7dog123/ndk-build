@@ -12,8 +12,9 @@ RUN ln -s /usr/bin/python2-config /usr/bin/python-config
 RUN pip install setuptools
 
 RUN git clone https://github.com/7dog123/ndk-build && \
-    cd ndkbuild && \
-    git submodule update --init
+    cd ndk-build && \
+    git submodule update --init && \
+    rm -rv .git
 
 COPY ./glob.c.patch ndk-build/platform/ndk
 WORKDIR ndk-build/platform/ndk
