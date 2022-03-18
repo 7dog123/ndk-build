@@ -102,3 +102,15 @@
 	path = platform/prebuilts/cmake/linux-x86
 	url = https://android.googlesource.com/platform/prebuilts/cmake/linux-x86
 	branch = ndk-release-r17
+[submodule "platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.8"]
+	path = platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.8
+	url = https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.8
+	branch = ndk-release-r17
+[submodule "platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9"]
+	path = platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9
+	url = https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9
+	branch = ndk-release-r17
+[submodule "platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.15-4.8"]
+	path = platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.15-4.8
+	url = https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.15-4.8
+	branch = ndk-release-r17
