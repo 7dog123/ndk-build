@@ -29,7 +29,27 @@ jobs:
       run: ./free_disk_space.sh
 
     - name: git submodules
-      run: git submodule update --init && df -h
+      run: git submodule update --init && sudo rm -rv .git
 
+    - name: install dependencies
+      run: |
+       sudo apt-get update
+       sudo apt-get -y install bison build-essential curl dos2unix flex \
+       git make pbzip2 python2 python3-pip texinfo zip patch
+       sudo apt-get clean
+
+    - name: install python depebdencies
+      run: |
+       sudo pip install setuptools
+       sudo pip install -r platform/ndk/requirements.txt
+
+    - name: patch make
+      run: |
+       cd  platform/ndk/sources/host-tools/make-3.81 && \
+       cat ../../../../../glob.c.patch | patch -p1
+
+    - name: build ndk
+      run: python platform/ndk/checkbuild.py --no-build-tests
     #- name: Build the Docker image
      # run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+
