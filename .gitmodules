@@ -150,3 +150,7 @@
 	path = platform/ndk
 	url = https://android.googlesource.com/platform/ndk
 	branch = ndk-release-r17
+[submodule "platform/prebuilts/ndk"]
+	path = platform/prebuilts/ndk
+	url = https://android.googlesource.com/platform/prebuilts/ndk
+	branch = ndk-release-r17
