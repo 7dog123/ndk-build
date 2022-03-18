@@ -26,3 +26,35 @@
 	path = toolchain/gcc
 	url = https://android.googlesource.com/toolchain/gcc
 	branch = ndk-release-r17
+[submodule "toolchain/isl"]
+	path = toolchain/isl
+	url = https://android.googlesource.com/toolchain/isl
+	branch = ndk-release-r17
+[submodule "toolchain/mpc"]
+	path = toolchain/mpc
+	url = https://android.googlesource.com/toolchain/mpc
+	branch = ndk-release-r17
+[submodule "toolchain/mpfr"]
+	path = toolchain/mpfr
+	url = https://android.googlesource.com/toolchain/mpfr
+	branch = ndk-release-r17
+[submodule "toolchain/ppl"]
+	path = toolchain/ppl
+	url = https://android.googlesource.com/toolchain/ppl
+	branch = ndk-release-r17
+[submodule "toolchain/sed"]
+	path = toolchain/sed
+	url = https://android.googlesource.com/toolchain/sed
+	branch = ndk-release-r17
+[submodule "toolchain/xz"]
+	path = toolchain/xz
+	url = https://android.googlesource.com/toolchain/xz
+	branch = ndk-release-r17
+[submodule "platform/bionic"]
+	path = platform/bionic
+	url = https://android.googlesource.com/platform/bionic
+	branch = ndk-release-r17
+[submodule "platform/development"]
+	path = platform/development
+	url = https://android.googlesource.com/platform/development
+	branch = ndk-release-r17
