@@ -74,3 +74,31 @@
 	path = platform/external/llvm
 	url = https://android.googlesource.com/platform/external/llvm
 	branch = ndk-release-r17
+[submodule "platform/external/googletest"]
+	path = platform/external/googletest
+	url = https://android.googlesource.com/platform/external/googletest
+	branch = ndk-release-r17
+[submodule "platform/external/shaderc/glslang"]
+	path = platform/external/shaderc/glslang
+	url = https://android.googlesource.com/platform/external/shaderc/glslang
+	branch = ndk-release-r17
+[submodule "platform/external/shaderc/shaderc"]
+	path = platform/external/shaderc/shaderc
+	url = https://android.googlesource.com/platform/external/shaderc/shaderc
+	branch = ndk-release-r17
+[submodule "platform/external/shaderc/spirv-headers"]
+	path = platform/external/shaderc/spirv-headers
+	url = https://android.googlesource.com/platform/external/shaderc/spirv-headers
+	branch = ndk-release-r17
+[submodule "platform/external/shaderc/spirv-tools"]
+	path = platform/external/shaderc/spirv-tools
+	url = https://android.googlesource.com/platform/external/shaderc/spirv-tools
+	branch = ndk-release-r17
+[submodule "platform/external/vulkan-validation-layers"]
+	path = platform/external/vulkan-validation-layers
+	url = https://android.googlesource.com/platform/external/vulkan-validation-layers
+	branch = ndk-release-r17
+[submodule "platform/prebuilts/cmake/linux-x86"]
+	path = platform/prebuilts/cmake/linux-x86
+	url = https://android.googlesource.com/platform/prebuilts/cmake/linux-x86
+	branch = ndk-release-r17
