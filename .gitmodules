@@ -1,0 +1,156 @@
+[submodule "toolchain/gdb"]
+	path = toolchain/gdb
+	url = https://android.googlesource.com/toolchain/gdb
+	branch = ndk-release-r17
+[submodule "toolchain/python"]
+	path = toolchain/python
+	url = https://android.googlesource.com/toolchain/python
+	branch = ndk-release-r17
+[submodule "toolchain/yasm"]
+	path = toolchain/yasm
+	url = https://android.googlesource.com/toolchain/yasm
+	branch = ndk-release-r17
+[submodule "toolchain/binutils"]
+	path = toolchain/binutils
+	url = https://android.googlesource.com/toolchain/binutils
+	branch = ndk-release-r17
+[submodule "toolchain/cloog"]
+	path = toolchain/cloog
+	url = https://android.googlesource.com/toolchain/cloog
+	branch = ndk-release-r17
+[submodule "toolchain/expat"]
+	path = toolchain/expat
+	url = https://android.googlesource.com/toolchain/expat
+	branch = ndk-release-r17
+[submodule "toolchain/gcc"]
+	path = toolchain/gcc
+	url = https://android.googlesource.com/toolchain/gcc
+	branch = ndk-release-r17
+[submodule "toolchain/isl"]
+	path = toolchain/isl
+	url = https://android.googlesource.com/toolchain/isl
+	branch = ndk-release-r17
+[submodule "toolchain/mpc"]
+	path = toolchain/mpc
+	url = https://android.googlesource.com/toolchain/mpc
+	branch = ndk-release-r17
+[submodule "toolchain/mpfr"]
+	path = toolchain/mpfr
+	url = https://android.googlesource.com/toolchain/mpfr
+	branch = ndk-release-r17
+[submodule "toolchain/ppl"]
+	path = toolchain/ppl
+	url = https://android.googlesource.com/toolchain/ppl
+	branch = ndk-release-r17
+[submodule "toolchain/sed"]
+	path = toolchain/sed
+	url = https://android.googlesource.com/toolchain/sed
+	branch = ndk-release-r17
+[submodule "toolchain/xz"]
+	path = toolchain/xz
+	url = https://android.googlesource.com/toolchain/xz
+	branch = ndk-release-r17
+[submodule "platform/bionic"]
+	path = platform/bionic
+	url = https://android.googlesource.com/platform/bionic
+	branch = ndk-release-r17
+[submodule "platform/development"]
+	path = platform/development
+	url = https://android.googlesource.com/platform/development
+	branch = ndk-release-r17
+[submodule "platform/external/libcxx"]
+	path = platform/external/libcxx
+	url = https://android.googlesource.com/platform/external/libcxx
+	branch = ndk-release-r17
+[submodule "platform/external/libcxxabi"]
+	path = platform/external/libcxxabi
+	url = https://android.googlesource.com/platform/external/libcxxabi
+	branch = ndk-release-r17
+[submodule "platform/external/libunwind_llvm"]
+	path = platform/external/libunwind_llvm
+	url = https://android.googlesource.com/platform/external/libunwind_llvm
+	branch = ndk-release-r17
+[submodule "platform/external/llvm"]
+	path = platform/external/llvm
+	url = https://android.googlesource.com/platform/external/llvm
+	branch = ndk-release-r17
+[submodule "platform/external/googletest"]
+	path = platform/external/googletest
+	url = https://android.googlesource.com/platform/external/googletest
+	branch = ndk-release-r17
+[submodule "platform/external/shaderc/glslang"]
+	path = platform/external/shaderc/glslang
+	url = https://android.googlesource.com/platform/external/shaderc/glslang
+	branch = ndk-release-r17
+[submodule "platform/external/shaderc/shaderc"]
+	path = platform/external/shaderc/shaderc
+	url = https://android.googlesource.com/platform/external/shaderc/shaderc
+	branch = ndk-release-r17
+[submodule "platform/external/shaderc/spirv-headers"]
+	path = platform/external/shaderc/spirv-headers
+	url = https://android.googlesource.com/platform/external/shaderc/spirv-headers
+	branch = ndk-release-r17
+[submodule "platform/external/shaderc/spirv-tools"]
+	path = platform/external/shaderc/spirv-tools
+	url = https://android.googlesource.com/platform/external/shaderc/spirv-tools
+	branch = ndk-release-r17
+[submodule "platform/external/vulkan-validation-layers"]
+	path = platform/external/vulkan-validation-layers
+	url = https://android.googlesource.com/platform/external/vulkan-validation-layers
+	branch = ndk-release-r17
+[submodule "platform/prebuilts/cmake/linux-x86"]
+	path = platform/prebuilts/cmake/linux-x86
+	url = https://android.googlesource.com/platform/prebuilts/cmake/linux-x86
+	branch = ndk-release-r17
+[submodule "platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.8"]
+	path = platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.8
+	url = https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.8
+	branch = ndk-release-r17
+[submodule "platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9"]
+	path = platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9
+	url = https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9
+	branch = ndk-release-r17
+[submodule "platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.15-4.8"]
+	path = platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.15-4.8
+	url = https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.15-4.8
+	branch = ndk-release-r17
+[submodule "platform/prebuilts/gcc/linux-x86/mips/mips64el-linux-android-4.9"]
+	path = platform/prebuilts/gcc/linux-x86/mips/mips64el-linux-android-4.9
+	url = https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/mips/mips64el-linux-android-4.9
+	branch = ndk-release-r17
+[submodule "platform/prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9"]
+	path = platform/prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9
+	url = https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9
+	branch = ndk-release-r17
+[submodule "platform/prebuilts/ninja/linux-x86"]
+	path = platform/prebuilts/ninja/linux-x86
+	url = https://android.googlesource.com/platform/prebuilts/ninja/linux-x86
+	branch = ndk-release-r17
+[submodule "platform/prebuilts/python/linux-x86/2.7.5"]
+	path = platform/prebuilts/python/linux-x86/2.7.5
+	url = https://android.googlesource.com/platform/prebuilts/python/linux-x86/2.7.5
+	branch = ndk-release-r17
+[submodule "platform/prebuilts/renderscript/host/linux-x86"]
+	path = platform/prebuilts/renderscript/host/linux-x86
+	url = https://android.googlesource.com/platform/prebuilts/renderscript/host/linux-x86
+	branch = ndk-release-r17
+[submodule "platform/prebuilts/simpleperf"]
+	path = platform/prebuilts/simpleperf
+	url = https://android.googlesource.com/platform/prebuilts/simpleperf
+	branch = ndk-release-r17
+[submodule "platform/prebuilts/clang/host/linux-x86"]
+	path = platform/prebuilts/clang/host/linux-x86
+	url = https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86
+	branch = ndk-release-r17
+[submodule "platform/prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8"]
+	path = platform/prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8
+	url = https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8
+	branch = ndk-release-r17
+[submodule "platform/ndk"]
+	path = platform/ndk
+	url = https://android.googlesource.com/platform/ndk
+	branch = ndk-release-r17
+[submodule "platform/prebuilts/ndk"]
+	path = platform/prebuilts/ndk
+	url = https://android.googlesource.com/platform/prebuilts/ndk
+	branch = ndk-release-r17
