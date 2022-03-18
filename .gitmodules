@@ -138,3 +138,15 @@
 	path = platform/prebuilts/simpleperf
 	url = https://android.googlesource.com/platform/prebuilts/simpleperf
 	branch = ndk-release-r17
+[submodule "platform/prebuilts/clang/host/linux-x86"]
+	path = platform/prebuilts/clang/host/linux-x86
+	url = https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86
+	branch = ndk-release-r17
+[submodule "platform/prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8"]
+	path = platform/prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8
+	url = https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8
+	branch = ndk-release-r17
+[submodule "platform/ndk"]
+	path = platform/ndk
+	url = https://android.googlesource.com/platform/ndk
+	branch = ndk-release-r17
