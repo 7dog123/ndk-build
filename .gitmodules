@@ -58,3 +58,19 @@
 	path = platform/development
 	url = https://android.googlesource.com/platform/development
 	branch = ndk-release-r17
+[submodule "platform/external/libcxx"]
+	path = platform/external/libcxx
+	url = https://android.googlesource.com/platform/external/libcxx
+	branch = ndk-release-r17
+[submodule "platform/external/libcxxabi"]
+	path = platform/external/libcxxabi
+	url = https://android.googlesource.com/platform/external/libcxxabi
+	branch = ndk-release-r17
+[submodule "platform/external/libunwind_llvm"]
+	path = platform/external/libunwind_llvm
+	url = https://android.googlesource.com/platform/external/libunwind_llvm
+	branch = ndk-release-r17
+[submodule "platform/external/llvm"]
+	path = platform/external/llvm
+	url = https://android.googlesource.com/platform/external/llvm
+	branch = ndk-release-r17
