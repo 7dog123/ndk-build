@@ -23,13 +23,15 @@ jobs:
         remove-haskell: 'true'
         remove-android: 'true'
 
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
+      with:
+        submodules: true
 
     - name: free up space
       run: ./free_disk_space.sh
 
-    - name: git submodules
-      run: git submodule update --init && sudo rm -rv .git
+  #  - name: git submodules
+    #  run: git submodule update --init && sudo rm -rv .git
 
     - name: install dependencies
       run: |
@@ -50,7 +52,7 @@ jobs:
 
     - name: patch config.py
       run: |
-       cd platforn/ndk/ndk
+       cd platform/ndk/ndk
        cat ../../../config.py.patch | patch -p1
        
     - name: build ndk
