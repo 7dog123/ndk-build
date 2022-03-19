@@ -1,0 +1,10 @@
+diff --git a/ndk/config.py b/ndk/config.py
+index 6bda4b8c..e9067ddf 100644
+--- a/ndk/config.py
++++ b/ndk/config.py
+@@ -7,4 +7,4 @@ canary = False
+ canary_str = '-canary' if canary else ''
+ release = 'r{}{}{}{}'.format(major, hotfix_str, beta_str, canary_str)
+ if __name__ == '__main__':
+-    print release
++    print (release)
