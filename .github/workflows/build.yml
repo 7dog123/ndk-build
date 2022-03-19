@@ -59,7 +59,10 @@ jobs:
        sudo ln -fsv /usr/bin/python2-config /usr/bin/python-config
 
     - name: build ndk
-      run: cd platform/ndk/  && python checkbuild.py --no-build-tests
+      run: |
+       mkdir -p /ndk
+       export ANDROID_NDK_ROOT=/ndk
+       cd platform/ndk/  && python checkbuild.py --no-build-tests
 
     - name: look into the directory
       run: ls
