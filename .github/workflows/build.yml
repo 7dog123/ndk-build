@@ -60,7 +60,7 @@ jobs:
 
     - name: build ndk
       run: |
-       mkdir -p /ndk
+       sudo mkdir -p /ndk
        export ANDROID_NDK_ROOT=/ndk
        cd platform/ndk/  && python checkbuild.py --no-build-tests
 
