@@ -55,8 +55,8 @@ jobs:
 
     - name: python link
       run: |
-       ln -fsv /usr/bin/python2 /usr/bin/python
-       ln -fsv /usr/bin/python2-config /usr/bin/python-config
+       sudo ln -fsv /usr/bin/python2 /usr/bin/python
+       sudo ln -fsv /usr/bin/python2-config /usr/bin/python-config
 
     - name: build ndk
       run: cd platform/ndk/  && python checkbuild.py --no-build-tests
