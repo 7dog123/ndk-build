@@ -51,9 +51,7 @@ jobs:
        cat ../../../../../glob.c.patch | patch -p1
 
     - name: patch config.py
-      run: |
-       cd platform/ndk/ndk
-       cat ../../../config.py.patch | patch -p1
+      run: sed -i 's/release/(release)/g' platform/ndk/ndk/config.py
        
     - name: build ndk
       run: cd platform/ndk/  && python checkbuild.py --no-build-tests
