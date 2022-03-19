@@ -52,7 +52,12 @@ jobs:
 
     - name: patch config.py
       run: sed -i 's/release/(release)/g' platform/ndk/ndk/config.py
-       
+
+    - name: python link
+      run: |
+       ln -s /usr/bin/python2 /usr/bin/python
+       ln -s /usr/bin/python2-config /usr/bin/python-config
+
     - name: build ndk
       run: cd platform/ndk/  && python checkbuild.py --no-build-tests
 
