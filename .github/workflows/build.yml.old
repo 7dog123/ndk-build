@@ -1,0 +1,73 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Maximize build space
+      uses: easimon/maximize-build-space@master
+      with:
+        root-reserve-mb: 512
+        swap-size-mb: 2048
+        remove-dotnet: 'true'
+        temp-reserve-mb: 1024
+        remove-haskell: 'true'
+        remove-android: 'true'
+
+    - uses: actions/checkout@v3
+      with:
+        submodules: true
+
+    - name: free up space
+      run: ./free_disk_space.sh
+
+  #  - name: git submodules
+    #  run: git submodule update --init && sudo rm -rv .git
+
+    - name: install dependencies
+      run: |
+       sudo apt-get update
+       sudo apt-get -y install bison build-essential curl dos2unix flex \
+       git make pbzip2 python2 python3-pip texinfo zip patch
+       sudo apt-get clean
+
+    - name: install python depebdencies
+      run: |
+       sudo pip install setuptools
+       cd platform/ndk/ && sudo pip install -r  requirements.txt
+
+    - name: patch make
+      run: |
+       cd  platform/ndk/sources/host-tools/make-3.81
+       cat ../../../../../glob.c.patch | patch -p1
+
+    - name: patch config.py
+      run: sed -i 's/release/(release)/g' platform/ndk/ndk/config.py
+
+    - name: python link
+      run: |
+       sudo ln -fsv /usr/bin/python2 /usr/bin/python
+       sudo ln -fsv /usr/bin/python2-config /usr/bin/python-config
+
+    - name: build ndk
+      run: |
+       sudo mkdir -p /ndk
+       export ANDROID_NDK_ROOT=/ndk
+       cd platform/ndk/  && python checkbuild.py --no-build-tests
+
+    - name: look into the directory
+      run: ls
+
+    #- name: Build the Docker image
+     # run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+
+
