@@ -29,4 +29,4 @@ FROM ubuntu:latest
 
 #RUN cd /ndk-build/platform/ndk && python checkbuild.py --no-build-tests --no-package
 
-RUN ls $HOME -a
+RUN ls /home -a
