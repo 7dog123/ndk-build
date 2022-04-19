@@ -2,9 +2,9 @@ FROM ubuntu:latest
 
 RUN apt-get update
 
-RUN DEBIAN_FRONTEND noninteractive \
-    apt-get -y install bison build-essential curl flex \
-    git make pbzip2 python python-pip texinfo \
+RUN DEBIAN_FRONTEND=noninteractive TZ=US/Central \
+    apt-get install -y bison build-essential curl flex \
+    git make pbzip2 python python3-pip texinfo \
     uuid-runtime zip unzip wget
 
 RUN git clone https://github.com/7dog123/ndk-build && \
