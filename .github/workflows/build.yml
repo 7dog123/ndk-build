@@ -13,15 +13,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Maximize build space
-      uses: easimon/maximize-build-space@master
-      with:
-        root-reserve-mb: 512
-        swap-size-mb: 2048
-        remove-dotnet: 'true'
-        temp-reserve-mb: 1024
-        remove-haskell: 'true'
-        remove-android: 'true
+     - name: Maximize build space
+       uses: easimon/maximize-build-space@master
+       with:
+         root-reserve-mb: 512
+         swap-size-mb: 2048
+         remove-dotnet: 'true'
+         temp-reserve-mb: 1024
+         remove-haskell: 'true'
+         remove-android: 'true
 
     - uses: actions/checkout@v3
 
