@@ -24,8 +24,6 @@ jobs:
        # remove-android: 'true'
 
     - uses: actions/checkout@v3
-      with:
-        submodules: true
 
     - name: free up space
       run: |
