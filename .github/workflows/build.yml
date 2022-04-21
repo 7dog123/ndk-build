@@ -28,7 +28,10 @@ jobs:
         submodules: true
 
     - name: free up space
-      run: ./free_disk_space.sh
+      run: |
+       ./free_disk_space.sh
+       sudo rm -rf .git
+       sudo rm -rf $ANDROID_HOME
 
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
