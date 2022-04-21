@@ -14,8 +14,37 @@ jobs:
     
     steps:
     - uses: actions/checkout@v3
+      with:
+        submodules: true
 
-    - name: Build the Docker image
+    - name: Install dependencies
       run: |
-       brew install docker
-       docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+       brew install  bison gcc curl dos2unix flex \
+       git make python@3.9 texinfo zip patch utils pypy3
+
+    - name: install python depebdencies
+      run: |
+       pip install setuptools
+       cd platform/ndk/ && pip install -r  requirements.txt
+
+    - name: patch make
+      run: |
+       cd  platform/ndk/sources/host-tools/make-3.81
+       cat ../../../../../glob.c.patch | patch -p1
+
+    - name: patch config.py
+      run: sed -i 's/release/(release)/g' platform/ndk/ndk/config.py
+
+    #- name: python link
+     # run: |
+      # sudo ln -fsv /usr/bin/python2 /usr/bin/python
+       #sudo ln -fsv /usr/bin/python2-config /usr/bin/python-config
+
+    - name: build ndk
+      run: |
+       mkdir -p /ndk
+       export ANDROID_NDK_ROOT=/ndk
+       cd platform/ndk/  && python checkbuild.py --no-build-tests --system linux
+
+    - name: look into the directory
+      run: ls  
