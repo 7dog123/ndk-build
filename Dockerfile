@@ -22,7 +22,7 @@ RUN ls -al
 #RUN pip install -r requirements.txt
 
 #RUN cd  /ndk-build/platform/ndk/sources/host-tools/make-3.81 && \
-   cat ../../../../../glob.c.patch | patch -p1
+ #  cat ../../../../../glob.c.patch | patch -p1
 
 #RUN cd /ndk-build/platform/ndk && python checkbuild.py --no-build-tests --no-package
 
