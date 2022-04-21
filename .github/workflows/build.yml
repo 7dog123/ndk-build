@@ -20,7 +20,7 @@ jobs:
     - name: Install dependencies
       run: |
        brew install  bison gcc curl dos2unix flex \
-       git make python@3.9 texinfo zip utils pypy3
+       git make python@3.9 texinfo zip pypy3
 
     - name: install python depebdencies
       run: |
