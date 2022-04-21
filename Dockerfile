@@ -9,8 +9,8 @@ RUN DEBIAN_FRONTEND=noninteractive TZ=US/Central \
 
 WORKDIR /platform/ndk
 
-RUN ln -s /usr/bin/python2 /usr/bin/python
-RUN ln -s /usr/bin/python2-config /usr/bin/python-config
+RUN ln -sf /usr/bin/python2 /usr/bin/python
+RUN ln -sf /usr/bin/python2-config /usr/bin/python-config
 
 RUN pip install setuptools
 
