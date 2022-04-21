@@ -13,15 +13,15 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Maximize build space
-      uses: easimon/maximize-build-space@master
-      with:
-        root-reserve-mb: 512
-        swap-size-mb: 2048
-        remove-dotnet: 'true'
-        temp-reserve-mb: 1024
-        remove-haskell: 'true'
-        remove-android: 'true'
+    #- name: Maximize build space
+     # uses: easimon/maximize-build-space@master
+     # with:
+       # root-reserve-mb: 512
+       # swap-size-mb: 2048
+       # remove-dotnet: 'true'
+       # temp-reserve-mb: 1024
+       # remove-haskell: 'true'
+       # remove-android: 'true'
 
     - uses: actions/checkout@v3
       with:
@@ -29,9 +29,18 @@ jobs:
 
     - name: free up space
       run: |
+       pwd
+       df -h
+       # Based on the official advice:
+       # https://github.com/actions/virtual-environments/issues/2840#issuecomment-790492173
+       sudo rm -rf /opt/ghc
+       sudo rm -rf "/usr/local/share/boost"
+       sudo rm -rf "$AGENT_TOOLSDIRECTORY"
+       sudo rm -rf $ANDROID_HOME
+       df -h
        ./free_disk_space.sh
        sudo rm -rf .git
-       sudo rm -rf $ANDROID_HOME
+       df -h
 
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
