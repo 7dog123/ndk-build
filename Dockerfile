@@ -7,13 +7,7 @@ RUN DEBIAN_FRONTEND=noninteractive TZ=US/Central \
     git make pbzip2 python python3-pip texinfo \
     uuid-runtime zip unzip wget
 
-RUN git clone https://github.com/7dog123/ndk-build && \
-    cd ndk-build && \
-    git submodule update --init && \
-    rm -rv .git
-
-COPY ./glob.c.patch ndk-build/platform/ndk
-WORKDIR ndk-build/platform/ndk
+WORKDIR /platform/ndk
 
 RUN ln -s /usr/bin/python2 /usr/bin/python
 RUN ln -s /usr/bin/python2-config /usr/bin/python-config
