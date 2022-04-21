@@ -13,20 +13,6 @@ jobs:
     runs-on: macos-latest
     
     steps:
-    #- name: Maximize build space
-     # uses: easimon/maximize-build-space@master
-      #with:
-       # root-reserve-mb: 512
-       # swap-size-mb: 2048
-       # remove-dotnet: 'true'
-       # temp-reserve-mb: 1024
-      #  remove-haskell: 'true'
-        remove-android: 'true'
-
-    - uses: actions/checkout@v3
-      
-   # - name: free up space
-    #  run: ./free_disk_space.sh
 
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
