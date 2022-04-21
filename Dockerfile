@@ -9,18 +9,21 @@ RUN DEBIAN_FRONTEND=noninteractive TZ=US/Central \
 
 RUN git clone --recursive https://github.com/7dog123/ndk-build
 
-WORKDIR /ndk-build/platform/ndk
+WORKDIR /ndk-build
+RUN ls -al
 
-RUN ln -sf /usr/bin/python2 /usr/bin/python
-RUN ln -sf /usr/bin/python2-config /usr/bin/python-config
+#RUN ln -sf /usr/bin/python2 /usr/bin/python
+#RUN ln -sf /usr/bin/python2-config /usr/bin/python-config
 
-RUN pip install setuptools
+#RUN pip install setuptools
 
-RUN pip install -r requirements.txt
+#RUN rm -rv .git
 
-RUN cd  /ndk-build/platform/ndk/sources/host-tools/make-3.81 && \
+#RUN pip install -r requirements.txt
+
+#RUN cd  /ndk-build/platform/ndk/sources/host-tools/make-3.81 && \
    cat ../../../../../glob.c.patch | patch -p1
 
-RUN cd /ndk-build/platform/ndk && python checkbuild.py --no-build-tests --no-package
+#RUN cd /ndk-build/platform/ndk && python checkbuild.py --no-build-tests --no-package
 
 
