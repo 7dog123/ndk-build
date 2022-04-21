@@ -27,10 +27,10 @@ jobs:
        pip install setuptools
        cd platform/ndk/ && pip install -r  requirements.txt
 
-    - name: patch make
-      run: |
-       cd  platform/ndk/sources/host-tools/make-3.81
-       cat ../../../../../glob.c.patch | patch -p1
+   # - name: patch make
+     # run: |
+     #  cd  platform/ndk/sources/host-tools/make-3.81
+       #cat ../../../../../glob.c.patch | patch -p1
 
     - name: patch config.py
       run: sed -i 's/release/(release)/g' platform/ndk/ndk/config.py
