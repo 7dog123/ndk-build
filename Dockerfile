@@ -1,5 +1,7 @@
 FROM ubuntu:latest
 
+RUN ls
+
 RUN apt-get update
 
 RUN DEBIAN_FRONTEND=noninteractive TZ=US/Central \
